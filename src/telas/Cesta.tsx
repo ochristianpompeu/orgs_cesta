@@ -1,7 +1,7 @@
-import { Text } from "react-native";
+import { Image } from "react-native";
 
 function Cesta() {
-  return <Text>My own component</Text>;
+  return <Image source={require("../../assets/topo.png")} />;
 }
 
 export { Cesta };
