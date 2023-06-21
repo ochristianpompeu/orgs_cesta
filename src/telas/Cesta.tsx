@@ -51,8 +51,8 @@ const estilos = StyleSheet.create({
   nomeCesta: {
     lineHeight: 46,
     fontSize: 26,
-    fontWeight: "bold",
     color: "#464646",
+    fontFamily: "MontserratBold",
   },
   fazenda: {
     flexDirection: "row",
@@ -66,6 +66,7 @@ const estilos = StyleSheet.create({
     lineHeight: 26,
     fontSize: 16,
     marginLeft: 12,
+    fontFamily: "MontserratRegular"
   },
   descricaoCesta: {
     lineHeight: 26,
