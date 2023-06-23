@@ -1,22 +1,30 @@
 import { Image, StyleSheet, View } from "react-native";
 import { Texto } from "../../components/Texto";
 
-function Detalhes() {
+interface DetalhesProps {
+  nomeCesta?: string | undefined;
+  logoFazenda?: any;
+  nomeFazenda?: string | undefined;
+  descricaoFazenda?: string | undefined;
+  valor?: string | undefined;
+}
+
+function Detalhes({
+  nomeCesta,
+  logoFazenda,
+  nomeFazenda,
+  descricaoFazenda,
+  valor,
+}: DetalhesProps) {
   return (
     <>
-      <Texto style={styles.nomeCesta}>Nome da Cesta</Texto>
+      <Texto style={styles.nomeCesta}>{nomeCesta}</Texto>
       <View style={styles.fazenda}>
-        <Image
-          source={require("../../../assets/logo.png")}
-          style={styles.imagemFazenda}
-        />
-        <Texto style={styles.nomeFazenda}>Nome da Fazenda</Texto>
+        <Image source={logoFazenda} style={styles.imagemFazenda} />
+        <Texto style={styles.nomeFazenda}>{nomeFazenda}</Texto>
       </View>
-      <Texto style={styles.descricaoCesta}>
-        Uma descrição razoavel da fazenda par ser exibida para os usuários
-        finais
-      </Texto>
-      <Texto style={styles.precoCesta}>R$ 40,00</Texto>
+      <Texto style={styles.descricaoCesta}>{descricaoFazenda}</Texto>
+      <Texto style={styles.precoCesta}>{valor}</Texto>
     </>
   );
 }

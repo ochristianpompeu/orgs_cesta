@@ -3,10 +3,15 @@ import { Texto } from "../../components/Texto";
 
 const screenWidth = Dimensions.get("screen").width;
 
-function Topo() {
+interface TopoProps {
+  titulo?: string;
+  imagem?: any;
+}
+
+function Topo({ titulo, imagem }: TopoProps) {
   return (
     <>
-      <Image source={require("../../../assets/topo.png")} style={styles.topo} />
+      <Image source={imagem} style={styles.topo} />
       <Texto style={styles.titulo}>Detalhes da Cesta</Texto>
     </>
   );

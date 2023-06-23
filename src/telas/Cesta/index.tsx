@@ -2,12 +2,26 @@ import { StyleSheet, View } from "react-native";
 import { Topo } from "./Topo";
 import { Detalhes } from "./Detalhes";
 
-function Cesta() {
+interface CestaProps {
+  topo?: {
+    titulo?: string;
+    imagem?: any;
+  };
+  detalhes?: {
+    nomeCesta?: string | undefined;
+    logoFazenda?: any;
+    nomeFazenda?: string | undefined;
+    descricaoFazenda?: string | undefined;
+    valor?: string | undefined;
+  };
+}
+
+function Cesta({ topo, detalhes }: CestaProps) {
   return (
     <>
-      <Topo />
+      <Topo {...topo} />
       <View style={estilos.cesta}>
-        <Detalhes />
+        <Detalhes {...detalhes} />
       </View>
     </>
   );
