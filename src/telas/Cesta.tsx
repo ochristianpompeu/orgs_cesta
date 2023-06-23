@@ -1,4 +1,5 @@
-import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
+import { Dimensions, Image, StyleSheet, View } from "react-native";
+import { Texto } from "../components/Texto";
 
 const screenWidth = Dimensions.get("screen").width;
 
@@ -6,22 +7,22 @@ function Cesta() {
   return (
     <>
       <Image source={require("../../assets/topo.png")} style={estilos.topo} />
-      <Text style={estilos.titulo}>Detalhes da Cesta</Text>
+      <Texto style={estilos.titulo}>Detalhes da Cesta</Texto>
 
       <View style={estilos.cesta}>
-        <Text style={estilos.nomeCesta}>Nome da Cesta</Text>
+        <Texto style={estilos.nomeCesta}>Nome da Cesta</Texto>
         <View style={estilos.fazenda}>
           <Image
             source={require("../../assets/logo.png")}
             style={estilos.imagemFazenda}
           />
-          <Text style={estilos.nomeFazenda}>Nome da Fazenda</Text>
+          <Texto style={estilos.nomeFazenda}>Nome da Fazenda</Texto>
         </View>
-        <Text style={estilos.descricaoCesta}>
+        <Texto style={estilos.descricaoCesta}>
           Uma descrição razoavel da fazenda par ser exibida para os usuários
           finais
-        </Text>
-        <Text style={estilos.precoCesta}>R$ 40,00</Text>
+        </Texto>
+        <Texto style={estilos.precoCesta}>R$ 40,00</Texto>
       </View>
     </>
   );
@@ -52,7 +53,7 @@ const estilos = StyleSheet.create({
     lineHeight: 46,
     fontSize: 26,
     color: "#464646",
-    fontFamily: "MontserratBold",
+    fontWeight: "bold",
   },
   fazenda: {
     flexDirection: "row",
@@ -66,7 +67,6 @@ const estilos = StyleSheet.create({
     lineHeight: 26,
     fontSize: 16,
     marginLeft: 12,
-    fontFamily: "MontserratRegular"
   },
   descricaoCesta: {
     lineHeight: 26,
