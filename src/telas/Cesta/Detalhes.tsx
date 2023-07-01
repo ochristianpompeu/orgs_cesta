@@ -1,5 +1,6 @@
 import { Image, StyleSheet, View } from "react-native";
 import { Texto } from "../../components/Texto";
+import { Button } from "../../components/Button";
 
 interface DetalhesProps {
   nomeCesta?: string | undefined;
@@ -7,6 +8,7 @@ interface DetalhesProps {
   nomeFazenda?: string | undefined;
   descricaoFazenda?: string | undefined;
   valor?: string | undefined;
+  botao: string;
 }
 
 function Detalhes({
@@ -15,6 +17,7 @@ function Detalhes({
   nomeFazenda,
   descricaoFazenda,
   valor,
+  botao,
 }: DetalhesProps) {
   return (
     <>
@@ -25,6 +28,7 @@ function Detalhes({
       </View>
       <Texto style={styles.descricaoCesta}>{descricaoFazenda}</Texto>
       <Texto style={styles.precoCesta}>{valor}</Texto>
+      <Button texto={botao} />
     </>
   );
 }

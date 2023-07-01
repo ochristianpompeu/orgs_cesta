@@ -25,7 +25,7 @@ function Texto({ children, style }: TextoProps) {
 const styles = StyleSheet.create({
   texto: {
     fontFamily: "MontserratRegular",
-    fontWeight: "normal"
+    fontWeight: "normal",
   },
   textoNegrito: {
     fontFamily: "MontserratBold",

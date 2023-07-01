@@ -7,12 +7,13 @@ interface CestaProps {
     titulo?: string;
     imagem?: any;
   };
-  detalhes?: {
+  detalhes: {
     nomeCesta?: string | undefined;
     logoFazenda?: any;
     nomeFazenda?: string | undefined;
     descricaoFazenda?: string | undefined;
     valor?: string | undefined;
+    botao: string;
   };
 }
 

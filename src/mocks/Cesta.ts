@@ -10,6 +10,7 @@ const cesta = {
     descricaoFazenda:
       "Uma descrição razoavel da fazenda par ser exibida para os usuáriosfinais",
     valor: "R$ 40,00",
+    botao: "Comprar",
   },
   itens: {
     titulo: "Itens da cesta",
