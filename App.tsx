@@ -1,10 +1,9 @@
 import { useState, useCallback, useEffect } from "react";
-import { SafeAreaView, StatusBar, View } from "react-native";
+import { SafeAreaView, StatusBar, StyleSheet, View } from "react-native";
 import { Cesta } from "./src/telas/Cesta";
 import * as SplashScreen from "expo-splash-screen";
 import * as Font from "expo-font";
 import {
-  useFonts,
   Montserrat_400Regular,
   Montserrat_700Bold,
 } from "@expo-google-fonts/montserrat";
@@ -40,7 +39,7 @@ export default function App() {
   }
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.view}>
       <View onLayout={onLayout}>
         <StatusBar />
         <Cesta {...cesta} />
@@ -48,3 +47,9 @@ export default function App() {
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  view: {
+    flex: 1,
+  },
+});
