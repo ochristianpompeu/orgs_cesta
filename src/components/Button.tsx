@@ -8,7 +8,7 @@ interface ButtonProps {
 function Button({ texto }: ButtonProps) {
   return (
     <>
-      <TouchableOpacity style={styles.botao}>
+      <TouchableOpacity style={styles.botao} onPress={() => {}}>
         <Texto style={styles.textoBotao}>{texto}</Texto>
       </TouchableOpacity>
     </>
@@ -20,13 +20,14 @@ const styles = StyleSheet.create({
     marginTop: 16,
     backgroundColor: "#2A9F85",
     paddingVertical: 16,
-    alignItems: "center",
-    borderRadius: 10,
+    borderRadius: 6,
   },
   textoBotao: {
     color: "#FFFFFF",
     fontWeight: "bold",
-    fontSize:16
+    fontSize: 16,
+    lineHeight: 26,
+    textAlign: "center",
   },
 });
 export { Button };

@@ -1,6 +1,7 @@
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import { Topo } from "./Topo";
 import { Detalhes } from "./Detalhes";
+import { Itens } from "./Itens";
 
 interface CestaProps {
   topo?: {
@@ -15,16 +16,24 @@ interface CestaProps {
     valor?: string | undefined;
     botao: string;
   };
+  itens: {
+    titulo: string;
+    lista: {
+      nome: string;
+      imagem: any;
+    }[];
+  };
 }
 
-function Cesta({ topo, detalhes }: CestaProps) {
+function Cesta({ topo, detalhes, itens }: CestaProps) {
   return (
-    <>
+    <ScrollView>
       <Topo {...topo} />
       <View style={estilos.cesta}>
         <Detalhes {...detalhes} />
+        <Itens itens={itens} />
       </View>
-    </>
+    </ScrollView>
   );
 }
 
